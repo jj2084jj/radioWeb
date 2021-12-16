@@ -17,17 +17,46 @@ function Header() {
         <div class="ftrBottom">
           <div>
             <ul>
-              <li>라디오 상품 문의</li>
-              <li>봉춘 라디오</li>
+              <li>
+                <a
+                  href="https://www.imbc.com/broad/radio/radiogift/index.html"
+                  target="_blank"
+                >
+                  라디오 상품 문의
+                </a>{" "}
+              </li>
+              <li>
+                <a
+                  href="https://clip.imbc.com/Brand/mbc?station=672"
+                  target="_blank"
+                >
+                  봉춘 라디오
+                </a>{" "}
+              </li>
               <li>
                 <p>RADIO SNS</p>
-                <img src="logo-facebook.png" alt="facebook" />
-                <a href="https://www.instagram.com/starnight959/">
+                <a href="https://www.facebook.com/radiombc/" target="_blank">
+                  <img src="logo-facebook.png" alt="facebook" />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/starnight959/"
+                  target="_blank"
+                >
                   <img src="logo-instagram.png" alt="instagram" />
                 </a>
-                <img src="logo-youtube.png" alt="youtube" />
+                <a
+                  href="https://www.youtube.com/channel/UCKNZsAeQXpvI-Mpoc0ZKhsA"
+                  target="_blank"
+                >
+                  <img src="logo-youtube.png" alt="youtube" />
+                </a>
               </li>
-              <li>온라인 공고 제휴</li>
+              <li>
+                <a href="http://mmt.imbc.com/#m6" target="_blank">
+                  온라인 공고 제휴
+                </a>{" "}
+              </li>
             </ul>
           </div>
           <div>

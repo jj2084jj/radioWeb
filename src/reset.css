@@ -430,8 +430,7 @@ footer {
 .ftrBottom div:last-child {
   line-height: 1.5;
 }
-
-/* 효과 */
-a {
-  color: inherit;
+.ftrBottom li:hover a {
+  color: white;
 }
+/* 효과 */
