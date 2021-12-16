@@ -22,7 +22,9 @@ function Header() {
               <li>
                 <p>RADIO SNS</p>
                 <img src="logo-facebook.png" alt="facebook" />
-                <img src="logo-instagram.png" alt="instagram" />
+                <a href="https://www.instagram.com/starnight959/">
+                  <img src="logo-instagram.png" alt="instagram" />
+                </a>
                 <img src="logo-youtube.png" alt="youtube" />
               </li>
               <li>온라인 공고 제휴</li>

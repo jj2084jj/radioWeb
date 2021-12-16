@@ -23,9 +23,19 @@ function SubMenu() {
           <li>
             <Link to="/replay">다시 듣기</Link>
           </li>
-          <li>보이는 라디오</li>
-          <li>상품 문의</li>
-          <li>인스타그램 starnight959</li>
+          <li>
+            <Link to="/show">보이는 라디오</Link>
+          </li>
+          <li>
+            <a href="https://www.imbc.com/broad/radio/radiogift/index.html">
+              상품 문의
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/starnight959/">
+              인스타그램 starnight959
+            </a>{" "}
+          </li>
         </ul>
       </div>
     </>

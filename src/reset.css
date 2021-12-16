@@ -432,3 +432,6 @@ footer {
 }
 
 /* 효과 */
+a {
+  color: inherit;
+}

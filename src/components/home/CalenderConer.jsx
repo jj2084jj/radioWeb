@@ -30,9 +30,9 @@ function CalenderConer() {
             <div className="title">
               <h2>2021년 12월</h2>
             </div>
-            <div style={{ width: "100%", height: "397px", marginRight: 0 }}>
+            <div style={{ width: "100%", marginRight: 0 }}>
               <Calendar
-                style={{ marginRight: 0 }}
+                style={{ margin: "38px 0px" }}
                 fullscreen={false}
                 onPanelChange={onPanelChange}
               />
