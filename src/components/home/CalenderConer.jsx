@@ -40,7 +40,7 @@ function CalenderConer() {
           </div>
           <div>
             <div className="title">
-              <img src="./img/sound.svg" alt="" />
+              <img src="/sound.svg" alt="" />
               <h2>선곡표</h2>
             </div>
             <div>

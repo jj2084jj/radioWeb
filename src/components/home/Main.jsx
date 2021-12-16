@@ -19,7 +19,7 @@ function Main() {
     <>
       <div className="container main">
         <div className="mainLogo">
-          <img src="/logo.png" alt="logo" />
+          <img src="../public/logo.png" alt="logo" />
         </div>
       </div>
     </>
