@@ -11,6 +11,7 @@ import Replay from "./components/Replay";
 import Mini from "./components/Mini";
 import { BrowserRouter } from "react-router-dom";
 import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/replay" component={Replay}></Route>
         <Route component={NotFound} exact></Route>
       </Switch>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
