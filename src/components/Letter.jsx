@@ -1,7 +1,7 @@
 function Letter() {
   return (
     <>
-      <div>Letter</div>
+      <div className="whiteBox container">Letter</div>
     </>
   );
 }

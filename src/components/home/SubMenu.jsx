@@ -1,7 +1,8 @@
-import { BrowserRouter, Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import React from "react";
 import "./SubMenu.scss";
-import axios from "axios";
+
+const activeStyle = { color: "white" };
 
 function SubMenu() {
   return (
@@ -9,22 +10,34 @@ function SubMenu() {
       <div className="container menuLine">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/" exact activeStyle={activeStyle}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/mini">Mini 메세지</Link>
+            <NavLink to="/mini" activeStyle={activeStyle}>
+              Mini 메세지
+            </NavLink>
           </li>
           <li>
-            <Link to="/playlist">선곡표</Link>
+            <NavLink to="/playlist" activeStyle={activeStyle}>
+              선곡표
+            </NavLink>
           </li>
           <li>
-            <Link to="/letter">사연과 신청곡</Link>
+            <NavLink to="/letter" activeStyle={activeStyle}>
+              사연과 신청곡
+            </NavLink>
           </li>
           <li>
-            <Link to="/replay">다시 듣기</Link>
+            <NavLink to="/replay" activeStyle={activeStyle}>
+              다시 듣기
+            </NavLink>
           </li>
           <li>
-            <Link to="/show">보이는 라디오</Link>
+            <NavLink to="/show" activeStyle={activeStyle}>
+              보이는 라디오
+            </NavLink>
           </li>
           <li>
             <a href="https://www.imbc.com/broad/radio/radiogift/index.html">

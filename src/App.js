@@ -12,6 +12,7 @@ import Mini from "./components/Mini";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
+import Show from "./components/Show";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/playlist" component={PlayList}></Route>
         <Route path="/letter" component={Letter}></Route>
         <Route path="/replay" component={Replay}></Route>
+        <Route path="/show" component={Show}></Route>
         <Route component={NotFound} exact></Route>
       </Switch>
       <Footer></Footer>

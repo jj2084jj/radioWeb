@@ -2,7 +2,7 @@ import React from "react";
 function Mini() {
   return (
     <>
-      <div>Mini</div>
+      <div className="whiteBox container">Mini</div>
     </>
   );
 }

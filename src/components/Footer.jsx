@@ -3,8 +3,8 @@ import React from "react";
 function Header() {
   return (
     <footer>
-      <div class="container">
-        <div class="ftrTop">
+      <div className="container">
+        <div className="ftrTop">
           <div>
             <img src="footer-logo-mini.png" alt="" />
             <p>
@@ -14,7 +14,7 @@ function Header() {
           </div>
           <div>프로그램 전체보기</div>
         </div>
-        <div class="ftrBottom">
+        <div className="ftrBottom">
           <div>
             <ul>
               <li>

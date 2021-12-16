@@ -1,7 +1,7 @@
 function PlayList() {
   return (
     <>
-      <div>PlayList</div>
+      <div className="whiteBox container">PlayList</div>
     </>
   );
 }

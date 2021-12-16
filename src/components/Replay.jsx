@@ -1,7 +1,7 @@
 function Replay() {
   return (
     <>
-      <div>Replay</div>
+      <div className="whiteBox container">Replay</div>
     </>
   );
 }
