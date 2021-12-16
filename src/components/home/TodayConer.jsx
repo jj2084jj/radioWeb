@@ -1,5 +1,4 @@
 import React from "react";
-import "./coner.scss";
 
 function TodayConer() {
   return (

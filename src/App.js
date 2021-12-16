@@ -9,13 +9,13 @@ import PlayList from "./components/PlayList";
 import Letter from "./components/Letter";
 import Replay from "./components/Replay";
 import Mini from "./components/Mini";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header></Header>
       <Main></Main>
       <SubMenu></SubMenu>
@@ -28,7 +28,7 @@ function App() {
         <Route component={NotFound} exact></Route>
       </Switch>
       <Footer></Footer>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 export default App;
