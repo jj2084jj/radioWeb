@@ -1,0 +1,436 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input:focus {
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* common */
+body {
+  background-color: #1c180f;
+  color: white;
+  background-image: url(/public/main.gif);
+  background-position: top center;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  /* max-width: 1218px; */
+  width: 1218px;
+  margin: 0 auto;
+  position: relative;
+}
+/* whiteBox */
+.whiteBox {
+  background-color: #fff;
+  padding: 36px 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  color: #000;
+}
+/* title */
+.title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  border-bottom: solid 1px #ebebeb;
+}
+.title img {
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.title h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.whiteBox.con01 {
+  width: 291px;
+  margin-right: 18px;
+}
+.todayConer {
+  display: flex;
+  justify-content: space-between;
+}
+.con01 ul li {
+  font-size: 15px;
+  text-align: left;
+  position: relative;
+  line-height: 1;
+  left: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.con01 ul li:hover {
+  color: #9d6908;
+}
+.con01 ul li:first-child {
+  margin-top: 29px;
+}
+.con01 ul li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: #c4c4c4;
+  left: -20px;
+  top: 5px;
+}
+.whiteBox.con02 {
+  width: 900px;
+}
+.con02 .subTit {
+  font-size: 18px;
+  margin-top: 30px;
+}
+.con02 .subTit span {
+  font-weight: bold;
+}
+.con02 .conText {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 66px;
+  line-height: 1.5;
+  text-align: left;
+}
+.con02 .conText span {
+  font-weight: bold;
+}
+.whiteBox.con03 {
+  width: 100%;
+}
+.con03 div:last-child {
+  margin-top: 35px;
+}
+.con03 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con03 .title {
+  border-bottom: none;
+}
+.con03 ul li {
+  width: 160px;
+  height: 130px;
+  text-align: center;
+  border-right: solid 2px #ebebeb;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.con03 ul li:hover h3,
+.con03 ul li:hover p {
+  color: #9d6908;
+}
+.con03 ul li:last-child {
+  border-right: none;
+}
+.con03 ul li h3 {
+  padding: 13px 37px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.con03 ul li p {
+  font-size: 15px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.con04 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.con04 > div {
+  width: 516px;
+}
+.con04 > div:first-child {
+  margin-right: 84px;
+}
+.con04 iframe {
+  margin-top: 40px;
+}
+.playList {
+  margin-top: 45px;
+  height: 354px;
+  overflow-y: scroll;
+}
+.playList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.playList li:hover {
+  border-radius: 20px;
+  background-color: #f6f1e8;
+}
+.playList li div:first-child {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.playList li h3 {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.whiteBox.con05,
+.whiteBox.con06 {
+  width: 600px;
+}
+.con05 ul {
+  margin-top: 30px;
+}
+.con05 ul li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.con05 ul li:hover p,
+.con05 ul li:hover h5 {
+  color: #9d6908;
+}
+.con05 ul li:last-child {
+  margin-bottom: 0;
+}
+.con05 ul li img {
+  margin-right: 23px;
+  border-radius: 10px;
+}
+.con05 ul li p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.con05 ul li h5 {
+  font-size: 15px;
+  height: 21px;
+}
+.con06 ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.con06 ul li {
+  margin-top: 20px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.con06 ul li > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.subTit {
+  display: flex;
+}
+.subTit h4 {
+  font-size: 15px;
+  font-weight: bold;
+  height: 21px;
+  margin-right: 10px;
+}
+.con06 ul li h3 {
+  font-size: 18px;
+  height: 26px;
+  margin-top: 3px;
+}
+.playCount {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+footer {
+  margin-top: 212px;
+  background-color: #0b0b0b;
+  color: #ebebeb;
+  padding: 116px 0;
+  font-weight: 300;
+}
+.ftrTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  border-bottom: solid 2px #c4c4c4;
+}
+.ftrTop div:first-child {
+  display: flex;
+  align-items: center;
+}
+.ftrTop div:first-child img {
+  margin-right: 20px;
+}
+.ftrBottom {
+  margin-top: 30px;
+  text-align: center;
+}
+.ftrBottom ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.ftrBottom ul li {
+  margin-right: 60px;
+  cursor: pointer;
+}
+.ftrBottom ul li:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+.ftrBottom ul li:nth-child(3) p,
+.ftrBottom ul li:nth-child(3) img {
+  margin-right: 10px;
+}
+.ftrBottom ul li:last-child {
+  margin-right: 0;
+}
+.ftrBottom div:last-child {
+  line-height: 1.5;
+}
+
+/* 효과 */

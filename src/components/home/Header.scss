@@ -1,0 +1,27 @@
+.topMenu {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 29px;
+  box-sizing: border-box;
+  > div {
+    display: flex;
+    .menuIcon {
+      margin-right: 32px;
+      div {
+        border-top: solid 1px white;
+        width: 24px;
+        margin-bottom: 8px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .headerRight {
+    div {
+      margin-left: 22px;
+      cursor: pointer;
+    }
+  }
+}

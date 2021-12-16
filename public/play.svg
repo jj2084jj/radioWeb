@@ -1,0 +1,12 @@
+<svg id="다시_듣기" data-name="다시 듣기" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <style>
+            .cls-1{fill:#c4c4c4}
+        </style>
+    </defs>
+    <g id="그룹_14" data-name="그룹 14" transform="translate(-376 -226)">
+        <path id="패스_18" data-name="패스 18" class="cls-1" d="M390 228.333A11.667 11.667 0 1 0 401.667 240 11.68 11.68 0 0 0 390 228.333zm0 21a9.333 9.333 0 1 1 9.333-9.333 9.344 9.344 0 0 1-9.333 9.333z"/>
+        <path id="패스_19" data-name="패스 19" class="cls-1" d="m387.384 244.879 8.449-4.879-8.449-4.879zm2.333-5.716 1.45.837-1.45.837z"/>
+    </g>
+    <path id="사각형_118" data-name="사각형 118" style="fill:none;opacity:.1" d="M0 0h28v28H0z"/>
+</svg>

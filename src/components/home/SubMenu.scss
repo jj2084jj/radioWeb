@@ -1,0 +1,31 @@
+.menuLine {
+  background-color: #d8b470;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #333333;
+    li {
+      padding: 0 25px;
+      border-right: solid 2px #fff;
+      font-weight: bold;
+      box-sizing: border-box;
+      transition: all 0.4s;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
+}
