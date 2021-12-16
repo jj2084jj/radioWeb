@@ -17,7 +17,6 @@ function ReplayContents() {
           }
         )
         .then((res) => {
-          console.log(res);
           setTopTracks(res.data.tracks.track);
         });
     }
@@ -29,7 +28,7 @@ function ReplayContents() {
       <div className="container todayConer">
         <div className="whiteBox con05">
           <div className="title">
-            <img src="/play.svg" alt="" />
+            <img src="play.svg" alt="" />
             <h2>다시 듣기</h2>
           </div>
           <div>
