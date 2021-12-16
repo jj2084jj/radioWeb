@@ -11,18 +11,18 @@ function Header() {
           <div></div>
         </div>
         <div className="siteIcon">
-          <img src="./img/mbc-logo.png" alt="mbc" />
+          <img src="mbc-logo.png" alt="mbclogo" />
         </div>
       </div>
       <div className="headerRight">
         <div className="search">
-          <img src="./img/search.svg" alt="" />
+          <img src="search.svg" alt="search" />
         </div>
         <div className="ticket">
-          <img src="./img/ticket.svg" alt="" />
+          <img src="ticket.svg" alt="ticket" />
         </div>
         <div>
-          <img src="./img/user.svg" alt="" />
+          <img src="user.svg" alt="user" />
         </div>
       </div>
     </header>

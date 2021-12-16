@@ -7,7 +7,7 @@ function TodayConer() {
       <div className="container todayConer">
         <div className="whiteBox con01">
           <div className="title">
-            <img src="./img/invalid-note.svg" alt="" />
+            <img src="invalid-note.svg" alt="" />
             <h2>매일 코너</h2>
           </div>
           <div>

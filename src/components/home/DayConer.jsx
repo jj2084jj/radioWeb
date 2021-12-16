@@ -6,7 +6,7 @@ function DayConer() {
       <div className="container dayConer">
         <div className="whiteBox con03">
           <div className="title">
-            <img src="./img/day.svg" alt="" />
+            <img src="day.svg" alt="" />
             <h2>요일 코너</h2>
           </div>
           <div>
