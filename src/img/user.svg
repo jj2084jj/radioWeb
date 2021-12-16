@@ -1,0 +1,12 @@
+<svg id="내_정보" data-name="내 정보" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <style>
+            .cls-2{fill:#c4c4c4}
+        </style>
+    </defs>
+    <path id="사각형_108" data-name="사각형 108" style="fill:none;opacity:.1" d="M0 0h28v28H0z"/>
+    <g id="그룹_2" data-name="그룹 2" transform="translate(3.242 2.199)">
+        <path id="패스_4" data-name="패스 4" class="cls-2" d="M177.621 239.9A10.693 10.693 0 0 0 167 250.639a1.18 1.18 0 0 0 2.36 0 8.261 8.261 0 1 1 16.521 0 1.18 1.18 0 0 0 2.36 0 10.693 10.693 0 0 0-10.62-10.739z" transform="translate(-167 -228.217)"/>
+        <path id="패스_5" data-name="패스 5" class="cls-2" d="M176.82 240.857a5.429 5.429 0 1 0-5.376-5.428 5.408 5.408 0 0 0 5.376 5.428zm0-8.5a3.069 3.069 0 1 1-3.016 3.068 3.047 3.047 0 0 1 3.016-3.065z" transform="translate(-166.2 -230)"/>
+    </g>
+</svg>

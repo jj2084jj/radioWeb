@@ -1,0 +1,14 @@
+<svg id="매일_코너" data-name="매일 코너" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <style>
+            .cls-1{fill:#c4c4c4}
+        </style>
+    </defs>
+    <g id="그룹_7" data-name="그룹 7" transform="translate(-255 -225.807)">
+        <path id="패스_8" data-name="패스 8" class="cls-1" d="M258.5 228.14v23.334h21V228.14zm18.667 21h-16.334v-18.666h16.334z"/>
+        <path id="사각형_111" data-name="사각형 111" class="cls-1" transform="translate(262.778 233.39)" d="M0 0h12.445v2.333H0z"/>
+        <path id="사각형_112" data-name="사각형 112" class="cls-1" transform="translate(262.778 238.64)" d="M0 0h12.445v2.333H0z"/>
+        <path id="사각형_113" data-name="사각형 113" class="cls-1" transform="translate(262.778 243.89)" d="M0 0h12.445v2.333H0z"/>
+    </g>
+    <path id="사각형_114" data-name="사각형 114" style="fill:none;opacity:.1" d="M0 0h28v28H0z"/>
+</svg>
