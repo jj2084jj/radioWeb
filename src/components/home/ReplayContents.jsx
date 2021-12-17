@@ -1,40 +1,94 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import List from "./List";
+import ReplayContentItem from "./ReplayContentItem";
 
 function ReplayContents() {
   const [topTracks, setTopTracks] = useState([]);
   const [youtubeList, setYoutubeList] = useState([]);
+  const URL = process.env.REACT_APP_YOUTUBE_API_KEY;
+  let list = [];
+  async function getYoutube() {
+    const body = {
+      params: {
+        key: URL,
+        channelId: "UCKNZsAeQXpvI-Mpoc0ZKhsA",
+        part: "snippet",
+        type: "video",
+        order: "date",
+        maxResults: 2,
+      },
+    };
+    const res = await axios.get(
+      "https://www.googleapis.com/youtube/v3/search",
+      body
+    );
+    // setYoutubeList(res.data.items);
+    const newYoutubeLlist = res.data.items.map(async (item) => {
+      const count = await getCount(item);
+      item.count = count;
+      return item;
+    });
+    setYoutubeList(youtubeList);
+  }
+  async function getCount(item) {
+    const res = axios.get("https://www.googleapis.com/youtube/v3/videos", {
+      params: {
+        part: "statistics",
+        key: URL,
+        id: item.id.videoId,
+      },
+    });
+    return res.data;
+    // setYoutubeList((youtubeList) => {
+    //   console.log(youtubeList, "ininininininininin");
+    //   let newYoutubeList;
+    //   if (youtubeList) {
+    //     newYoutubeList = youtubeList.map((el) => {
+    //       console.log(el, "in youtbe le");
+    //       return el;
+    //     });
+    //     return newYoutubeList;
+    //   }
+    // });
+    // }).then((res) => {
+    //   item.count = res.data.items[0].statistics.viewCount;
 
+    //   list.push(item);
+
+    //   console.log(list, "리스트");
+    //   setYoutubeList(list);
+    //   //
+    // });
+  }
+  async function getTopTrack() {
+    await axios
+      .get(
+        "https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=disco&api_key=e4a46faa887790f4ecfad07f9d7aa5de&format=json",
+        {
+          params: {
+            limit: 5,
+          },
+        }
+      )
+      .then((res) => {
+        setTopTracks(res.data.tracks.track);
+      });
+  }
   useEffect(() => {
-    async function getTopTrack() {
-      await axios
-        .get(
-          "https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=disco&api_key=e4a46faa887790f4ecfad07f9d7aa5de&format=json",
-          {
-            params: {
-              limit: 5,
-            },
-          }
-        )
-        .then((res) => {
-          setTopTracks(res.data.tracks.track);
-        });
-    }
-    async function getYoutube() {
-      const link = await axios
-        .get({
-          url: "https://www.googleapis.com/youtube/v3/search?",
-          params: { key: process.env.REACT_APP_YOUTUBE_API_KEY ,q="RadioMBC",part="snippet",type="channel"},
-        })
-        .then((res) => {
-          console.log(res);
-        });
-    }
+    console.log("in useeffect1");
     getTopTrack();
     getYoutube();
   }, []);
-
+  // useEffect(() => {
+  //   console.log("in useeffect2");
+  //   if (youtubeList) {
+  //     youtubeList.forEach((el) => {
+  //       console.log("hi");
+  //       getCount(el);
+  //     });
+  //   }
+  // }, [youtubeList]);
   return (
     <>
       <div className="container todayConer">
@@ -58,94 +112,19 @@ function ReplayContents() {
           </div>
           <div>
             <ul>
-              <li>
-                <img
-                  src="https://jj2084jj.github.io/radioWeb/2021-12-13.png"
-                  alt=""
-                />
-                <div>
-                  <div>
-                    <div className="subTit">
-                      <h4>1083회</h4>
-                      <p>2021-12-13</p>
-                    </div>
-                    <h3>별밤 초대석 with 카이</h3>
-                  </div>
-                  <div>
-                    <img
-                      src="https://jj2084jj.github.io/radioWeb/6.svg"
-                      alt=""
+              {youtubeList
+                ? youtubeList.map((item, index) => (
+                    <ReplayContentItem
+                      key={index}
+                      img={item.snippet.thumbnails.medium.url}
+                      day={item.snippet.publishedAt.substring(0, 10)}
+                      url={
+                        item.id.videoId ? item.id.videoId : item.id.playlistId
+                      }
+                      title={item.snippet.description}
                     />
-                    <p className="playCount">52</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <img
-                  src="https://jj2084jj.github.io/radioWeb/2021-12-12.png"
-                  alt=""
-                />
-                <div>
-                  <div>
-                    <div className="subTit">
-                      <h4>1083회</h4>
-                      <p>2021-12-13</p>
-                    </div>
-                    <h3>별밤 초대석 with 카이</h3>
-                  </div>
-                  <div>
-                    <img
-                      src="https://jj2084jj.github.io/radioWeb/6.svg"
-                      alt=""
-                    />
-                    <p className="playCount">52</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <img
-                  src="https://jj2084jj.github.io/radioWeb/2021-12-11.png"
-                  alt=""
-                />
-                <div>
-                  <div>
-                    <div className="subTit">
-                      <h4>1083회</h4>
-                      <p>2021-12-13</p>
-                    </div>
-                    <h3>별밤 초대석 with 카이</h3>
-                  </div>
-                  <div>
-                    <img
-                      src="https://jj2084jj.github.io/radioWeb/6.svg"
-                      alt=""
-                    />
-                    <p className="playCount">52</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <img
-                  src="https://jj2084jj.github.io/radioWeb/2021-12-10.png"
-                  alt=""
-                />
-                <div>
-                  <div>
-                    <div className="subTit">
-                      <h4>1083회</h4>
-                      <p>2021-12-13</p>
-                    </div>
-                    <h3>별밤 초대석 with 카이</h3>
-                  </div>
-                  <div>
-                    <img
-                      src="https://jj2084jj.github.io/radioWeb/6.svg"
-                      alt=""
-                    />
-                    <p className="playCount">52</p>
-                  </div>
-                </div>
-              </li>
+                  ))
+                : null}
             </ul>
           </div>
         </div>

@@ -364,12 +364,12 @@ body {
   box-sizing: border-box;
   cursor: pointer;
 }
-.con06 ul li > div {
+/* .con06 ul li > div {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   align-items: center;
-}
+} */
 .subTit {
   display: flex;
 }
@@ -378,6 +378,15 @@ body {
   font-weight: bold;
   height: 21px;
   margin-right: 10px;
+}
+.con06 ul li a:hover {
+  color: #000;
+}
+.con06 ul li > a > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 .con06 ul li h3 {
   font-size: 18px;
