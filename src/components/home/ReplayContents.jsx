@@ -1,10 +1,11 @@
-import { queryByTitle } from "@testing-library/dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import List from "./List";
 
 function ReplayContents() {
   const [topTracks, setTopTracks] = useState([]);
+  const [youtubeList, setYoutubeList] = useState([]);
+
   useEffect(() => {
     async function getTopTrack() {
       await axios
@@ -20,7 +21,18 @@ function ReplayContents() {
           setTopTracks(res.data.tracks.track);
         });
     }
+    async function getYoutube() {
+      const link = await axios
+        .get({
+          url: "https://www.googleapis.com/youtube/v3/search?",
+          params: { key: process.env.REACT_APP_YOUTUBE_API_KEY ,q="RadioMBC",part="snippet",type="channel"},
+        })
+        .then((res) => {
+          console.log(res);
+        });
+    }
     getTopTrack();
+    getYoutube();
   }, []);
 
   return (

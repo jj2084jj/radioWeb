@@ -326,7 +326,7 @@ body {
 .con05 ul {
   margin-top: 30px;
 }
-.con05 ul li {
+.con05 ul li a {
   display: flex;
   justify-content: left;
   align-items: center;
