@@ -4,9 +4,9 @@ import "./LetterBoard.scss";
 
 function LetterBoard() {
   useEffect(() => {
-    axios.get(
-      "https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}?api-version=2021-04-01"
-    );
+    // axios.get(
+    //   "https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}?api-version=2021-04-01"
+    // );
   }, []);
   return (
     <>
@@ -24,7 +24,7 @@ function LetterBoard() {
           </button>
           <button className="write">
             <img
-              src="https://jj2084jj.github.io/radioWeb/img-icon-write.jpg"
+              src="https://jj2084jj.github.io/radioWeb/img-icon-write.png"
               alt="write"
             />
             글쓰기
@@ -32,7 +32,10 @@ function LetterBoard() {
         </div>
         <div className="notice">
           <button>
-            <img src="/free-icon-lightbulb-702797.jpg" alt="" />
+            <img
+              src="https://jj2084jj.github.io/radioWeb/free-icon-lightbulb-702797.png"
+              alt=""
+            />
             <p>특정가수 도배는 자제해주시면 감사하겠습니다!-별밤</p>
           </button>
         </div>

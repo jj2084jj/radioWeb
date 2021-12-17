@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
-
+function menuClick(props) {
+  console.log(props);
+}
 function Header() {
   return (
     <header className="container topMenu">
       <div className="headerLeft">
-        <div className="menuIcon">
+        <div
+          className="menuIcon"
+          style={{ cursor: "pointer" }}
+          onClick={menuClick}
+        >
           <div></div>
           <div></div>
           <div></div>
