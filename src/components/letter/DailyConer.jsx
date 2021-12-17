@@ -4,10 +4,7 @@ function DailyConer() {
       <div className="container ">
         <div className="whiteBox con01" style={{ marginTop: "20px" }}>
           <div className="title">
-            <img
-              src="https://jj2084jj.github.io/radioWeb/invalid-note.svg"
-              alt=""
-            />
+            <img src="https://jj2084jj.github.io/radioWeb/day.svg" alt="" />
             <h2>요일 코너</h2>
           </div>
           <div>
