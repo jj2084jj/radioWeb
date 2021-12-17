@@ -34,12 +34,7 @@ function ReplayContents() {
           <div>
             <ul>
               {topTracks.map((track, index) => (
-                <List
-                  key={index}
-                  name={track.artist.name}
-                  title={track.name}
-                  img="https://jj2084jj.github.io/radioWeb/youtubeIcon.jpg"
-                />
+                <List key={index} name={track.artist.name} title={track.name} />
               ))}
             </ul>
           </div>

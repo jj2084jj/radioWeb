@@ -1,4 +1,4 @@
-function List({ name, img, title }) {
+function List({ name, title }) {
   return (
     <>
       <li>
