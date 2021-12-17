@@ -6,7 +6,10 @@ function Header() {
       <div className="container">
         <div className="ftrTop">
           <div>
-            <img src="footer-logo-mini.png" alt="" />
+            <img
+              src="https://jj2084jj.github.io/radioWeb/footer-logo-mini.png"
+              alt=""
+            />
             <p>
               문자참여: #8001 정보이용료 SMS: 50원, MMS: 100원 | 서울시 마포구
               성암로 267 (03925) &#60;별이 빛나는 밤에 &#62; 담당자앞
@@ -36,20 +39,29 @@ function Header() {
               <li>
                 <p>RADIO SNS</p>
                 <a href="https://www.facebook.com/radiombc/" target="_blank">
-                  <img src="logo-facebook.png" alt="facebook" />
+                  <img
+                    src="https://jj2084jj.github.io/radioWeb/logo-facebook.png"
+                    alt="facebook"
+                  />
                 </a>
 
                 <a
                   href="https://www.instagram.com/starnight959/"
                   target="_blank"
                 >
-                  <img src="logo-instagram.png" alt="instagram" />
+                  <img
+                    src="https://jj2084jj.github.io/radioWeb/logo-instagram.png"
+                    alt="instagram"
+                  />
                 </a>
                 <a
                   href="https://www.youtube.com/channel/UCKNZsAeQXpvI-Mpoc0ZKhsA"
                   target="_blank"
                 >
-                  <img src="logo-youtube.png" alt="youtube" />
+                  <img
+                    src="https://jj2084jj.github.io/radioWeb/logo-youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </li>
               <li>

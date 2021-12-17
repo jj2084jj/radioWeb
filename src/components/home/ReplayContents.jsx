@@ -28,7 +28,7 @@ function ReplayContents() {
       <div className="container todayConer">
         <div className="whiteBox con05">
           <div className="title">
-            <img src="play.svg" alt="" />
+            <img src="https://jj2084jj.github.io/radioWeb/play.svg" alt="" />
             <h2>다시 듣기</h2>
           </div>
           <div>
@@ -38,7 +38,7 @@ function ReplayContents() {
                   key={index}
                   name={track.artist.name}
                   title={track.name}
-                  img={track.image[1]["#text"]}
+                  img="https://jj2084jj.github.io/radioWeb/youtubeIcon.jpg"
                 />
               ))}
             </ul>
@@ -46,13 +46,16 @@ function ReplayContents() {
         </div>
         <div className="whiteBox con06">
           <div className="title">
-            <img src="show.svg" alt="" />
+            <img src="https://jj2084jj.github.io/radioWeb/show.svg" alt="" />
             <h2>보이는 라디오</h2>
           </div>
           <div>
             <ul>
               <li>
-                <img src="2021-12-13.png" alt="" />
+                <img
+                  src="https://jj2084jj.github.io/radioWeb/2021-12-13.png"
+                  alt=""
+                />
                 <div>
                   <div>
                     <div className="subTit">
@@ -62,13 +65,19 @@ function ReplayContents() {
                     <h3>별밤 초대석 with 카이</h3>
                   </div>
                   <div>
-                    <img src="6.svg" alt="" />
+                    <img
+                      src="https://jj2084jj.github.io/radioWeb/6.svg"
+                      alt=""
+                    />
                     <p className="playCount">52</p>
                   </div>
                 </div>
               </li>
               <li>
-                <img src="2021-12-12.png" alt="" />
+                <img
+                  src="https://jj2084jj.github.io/radioWeb/2021-12-12.png"
+                  alt=""
+                />
                 <div>
                   <div>
                     <div className="subTit">
@@ -78,13 +87,19 @@ function ReplayContents() {
                     <h3>별밤 초대석 with 카이</h3>
                   </div>
                   <div>
-                    <img src="6.svg" alt="" />
+                    <img
+                      src="https://jj2084jj.github.io/radioWeb/6.svg"
+                      alt=""
+                    />
                     <p className="playCount">52</p>
                   </div>
                 </div>
               </li>
               <li>
-                <img src="2021-12-11.png" alt="" />
+                <img
+                  src="https://jj2084jj.github.io/radioWeb/2021-12-11.png"
+                  alt=""
+                />
                 <div>
                   <div>
                     <div className="subTit">
@@ -94,13 +109,19 @@ function ReplayContents() {
                     <h3>별밤 초대석 with 카이</h3>
                   </div>
                   <div>
-                    <img src="6.svg" alt="" />
+                    <img
+                      src="https://jj2084jj.github.io/radioWeb/6.svg"
+                      alt=""
+                    />
                     <p className="playCount">52</p>
                   </div>
                 </div>
               </li>
               <li>
-                <img src="2021-12-10.png" alt="" />
+                <img
+                  src="https://jj2084jj.github.io/radioWeb/2021-12-10.png"
+                  alt=""
+                />
                 <div>
                   <div>
                     <div className="subTit">
@@ -110,7 +131,10 @@ function ReplayContents() {
                     <h3>별밤 초대석 with 카이</h3>
                   </div>
                   <div>
-                    <img src="6.svg" alt="" />
+                    <img
+                      src="https://jj2084jj.github.io/radioWeb/6.svg"
+                      alt=""
+                    />
                     <p className="playCount">52</p>
                   </div>
                 </div>

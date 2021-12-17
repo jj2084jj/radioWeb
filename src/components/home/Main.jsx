@@ -19,7 +19,7 @@ function Main() {
     <>
       <div className="container main">
         <div className="mainLogo">
-          <img src="logo.png" alt="logo" />
+          <img src="https://jj2084jj.github.io/radioWeb/logo.png" alt="logo" />
         </div>
       </div>
     </>

@@ -6,7 +6,10 @@ function TodayConer() {
       <div className="container todayConer">
         <div className="whiteBox con01">
           <div className="title">
-            <img src="invalid-note.svg" alt="" />
+            <img
+              src="https://jj2084jj.github.io/radioWeb/invalid-note.svg"
+              alt=""
+            />
             <h2>매일 코너</h2>
           </div>
           <div>
