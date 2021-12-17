@@ -1,10 +1,12 @@
 import React from "react";
+import TodayConerList from "./TodayConerList";
 
 function TodayConer() {
   return (
     <>
       <div className="container todayConer">
-        <div className="whiteBox con01">
+        <TodayConerList></TodayConerList>
+        {/* <div className="whiteBox con01">
           <div className="title">
             <img
               src="https://jj2084jj.github.io/radioWeb/invalid-note.svg"
@@ -19,7 +21,7 @@ function TodayConer() {
               <li>내일 할 일</li>
             </ul>
           </div>
-        </div>
+        </div> */}
         <div className="whiteBox con02">
           <div className="title">
             <h2>Today</h2>
