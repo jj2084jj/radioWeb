@@ -3,7 +3,7 @@ function List({ name, title }) {
     <>
       <li>
         <img
-          src="https://jj2084jj.github.io/radioWeb/youtubeIcon.png"
+          src="https://jj2084jj.github.io/radioWeb/youtubeIcon.jpg"
           alt={name}
         />
         <div>
