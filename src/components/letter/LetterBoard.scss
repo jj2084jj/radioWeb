@@ -2,21 +2,34 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  img {
+    margin-right: 10px;
+  }
 }
 .TopBtnWrap {
   margin-top: 40px;
-  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
   .rule {
     background-color: #fff;
     border: solid 1px #b1b1b1;
     height: 40px;
     margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #e9e9e9;
+    }
   }
   .write {
     background-color: #d0a048;
     height: 40px;
     border: none;
     color: white;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #9e752a;
+    }
   }
 }
 
