@@ -288,6 +288,13 @@ body {
   height: 354px;
   overflow-y: scroll;
 }
+.playList::-webkit-scrollbar {
+  width: 6px;
+}
+.playList::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 10px;
+}
 .playList li {
   display: flex;
   justify-content: space-between;
