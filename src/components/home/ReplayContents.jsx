@@ -7,7 +7,7 @@ function ReplayContents() {
   const [topTracks, setTopTracks] = useState([]);
   const [youtubeList, setYoutubeList] = useState([]);
   const URL = process.env.REACT_APP_YOUTUBE_API_KEY;
-  let list = [];
+
   async function getYoutube() {
     const body = {
       params: {
@@ -16,50 +16,33 @@ function ReplayContents() {
         part: "snippet",
         type: "video",
         order: "date",
-        maxResults: 2,
+        maxResults: 4,
       },
     };
     const res = await axios.get(
       "https://www.googleapis.com/youtube/v3/search",
       body
     );
-    // setYoutubeList(res.data.items);
-    const newYoutubeLlist = res.data.items.map(async (item) => {
+    res.data.items.map(async (item) => {
       const count = await getCount(item);
-      item.count = count;
+      item.count = count.toLocaleString("en");
       return item;
     });
-    setYoutubeList(youtubeList);
+    return res.data.items;
   }
   async function getCount(item) {
-    const res = axios.get("https://www.googleapis.com/youtube/v3/videos", {
-      params: {
-        part: "statistics",
-        key: URL,
-        id: item.id.videoId,
-      },
-    });
-    return res.data;
-    // setYoutubeList((youtubeList) => {
-    //   console.log(youtubeList, "ininininininininin");
-    //   let newYoutubeList;
-    //   if (youtubeList) {
-    //     newYoutubeList = youtubeList.map((el) => {
-    //       console.log(el, "in youtbe le");
-    //       return el;
-    //     });
-    //     return newYoutubeList;
-    //   }
-    // });
-    // }).then((res) => {
-    //   item.count = res.data.items[0].statistics.viewCount;
-
-    //   list.push(item);
-
-    //   console.log(list, "리스트");
-    //   setYoutubeList(list);
-    //   //
-    // });
+    const cc = await axios
+      .get("https://www.googleapis.com/youtube/v3/videos", {
+        params: {
+          part: "statistics",
+          key: URL,
+          id: item.id.videoId,
+        },
+      })
+      .then((res) => {
+        return res.data.items[0].statistics.viewCount;
+      });
+    return cc;
   }
   async function getTopTrack() {
     await axios
@@ -75,20 +58,12 @@ function ReplayContents() {
         setTopTracks(res.data.tracks.track);
       });
   }
-  useEffect(() => {
-    console.log("in useeffect1");
-    getTopTrack();
-    getYoutube();
+  useEffect(async () => {
+    await getTopTrack();
+    await getYoutube().then(async (res) => {
+      return await setYoutubeList(res);
+    });
   }, []);
-  // useEffect(() => {
-  //   console.log("in useeffect2");
-  //   if (youtubeList) {
-  //     youtubeList.forEach((el) => {
-  //       console.log("hi");
-  //       getCount(el);
-  //     });
-  //   }
-  // }, [youtubeList]);
   return (
     <>
       <div className="container todayConer">
@@ -121,6 +96,7 @@ function ReplayContents() {
                       url={
                         item.id.videoId ? item.id.videoId : item.id.playlistId
                       }
+                      item={item}
                       title={item.snippet.description}
                     />
                   ))

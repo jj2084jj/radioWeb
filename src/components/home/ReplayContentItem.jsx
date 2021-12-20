@@ -1,25 +1,8 @@
+import Item from "antd/lib/list/Item";
 import axios from "axios";
 import { useEffect } from "react";
 
-function ReplayContentItem({ img, day, title, url }) {
-  console.log(url);
-  // useEffect(() => {
-  //   console.log(url);
-  //   async function getYoutubeCount() {
-  //     await axios
-  //       .get("https://www.googleapis.com/youtube/v3/videos", {
-  //         params: {
-  //           part: "statistics",
-  //           key: process.env.REACT_APP_YOUTUBE_API_KEY,
-  //           id: url,
-  //         },
-  //       })
-  //       .then((res) => {
-  //         console.log(res.data.items[0].statistics.viewCount);
-  //       });
-  //   }
-  //   getYoutubeCount();
-  // }, [url]);
+function ReplayContentItem({ img, day, title, url, item }) {
   return (
     <li style={{ width: "50%" }}>
       <a href={`https://www.youtube.com/embed/${url}`}>
@@ -34,7 +17,7 @@ function ReplayContentItem({ img, day, title, url }) {
           </div>
           <div>
             <img src="https://jj2084jj.github.io/radioWeb/6.svg" alt="" />
-            <p className="playCount">52</p>
+            <p className="playCount">{item.count}</p>
           </div>
         </div>
       </a>
