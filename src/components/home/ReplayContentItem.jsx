@@ -1,7 +1,3 @@
-import Item from "antd/lib/list/Item";
-import axios from "axios";
-import { useEffect } from "react";
-
 function ReplayContentItem({ img, day, title, url, item }) {
   return (
     <li style={{ width: "50%" }}>

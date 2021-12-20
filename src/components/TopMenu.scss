@@ -1,0 +1,130 @@
+.topMenuBg {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  color: black;
+  padding: 26px 0 72px;
+
+  .container {
+    .menuHeader {
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
+      }
+      .headerLeft {
+        justify-content: left;
+        div {
+          cursor: pointer;
+        }
+      }
+      .headerRigth {
+        justify-content: right;
+        div {
+          margin-right: 22px;
+          cursor: pointer;
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+    .menuContents {
+      .slideHeader {
+        ul {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 18px;
+          padding: 32px 0 20px;
+          border-bottom: solid 1px #ebebeb;
+          box-sizing: unset;
+          text-align: center;
+          li {
+            width: 128px;
+            // height: 46px;
+            cursor: pointer;
+            padding: 10px 30px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background-color: #0075e0;
+              a {
+                color: white;
+              }
+              font-weight: bold;
+              border-radius: 29px;
+            }
+          }
+        }
+      }
+      .slideSubHeader {
+        ul {
+          display: flex;
+
+          padding: 20px 0;
+          box-sizing: unset;
+          justify-content: left;
+          font-size: 15px;
+          border-bottom: solid 1px #ebebeb;
+          li {
+            margin-right: 50px;
+            a {
+              color: unset;
+            }
+          }
+        }
+      }
+    }
+    .menuVideo {
+      margin-top: 29px;
+      display: flex;
+      justify-content: space-between;
+      > div {
+        width: 50%;
+        margin-right: 72px;
+        h3 {
+          font-size: 18px;
+        }
+        .liveVideoContents,
+        .onVideoContents {
+          margin-top: 20px;
+          ul {
+            display: flex;
+            justify-content: left;
+            li {
+              margin-right: 20px;
+              div {
+                &:first-child {
+                  width: 270px;
+                  height: 152px;
+                  background-color: gray;
+                  margin-bottom: 5px;
+                }
+                &:last-child {
+                  h4 {
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    height: 26px;
+                    line-height: 26px;
+                  }
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+              .liveVideoImg {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
