@@ -17,7 +17,7 @@ function LetterBoard() {
         <div className="TopBtnWrap">
           <button className="rule">
             <img
-              src="https://jj2084jj.github.io/radioWeb/img-icon-rule.png"
+              src="https://jj2084jj.github.io/radioWeb/img-icon-rule.jpg"
               alt="rule"
             />
             게시판 운영 원칙
