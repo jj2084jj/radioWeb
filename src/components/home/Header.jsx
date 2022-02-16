@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.scss";
-import TopMenu from "../TopMenu";
+// import TopMenu from "../TopMenu";
 
 function Header() {
   const [hover, setHover] = useState(true);
@@ -10,7 +10,7 @@ function Header() {
   }
   return (
     <>
-      <TopMenu hover={hover}></TopMenu>
+      {/* <TopMenu hover={hover}></TopMenu> */}
       <header className="container topMenu">
         <div className="headerLeft">
           <div
