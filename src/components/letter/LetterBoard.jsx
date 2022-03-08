@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
 import "./LetterBoard.scss";
-import ShowList from "../show/ShowList"
 
 function LetterBoard({ title, subTitle }) {
   useEffect(() => {
@@ -38,6 +37,7 @@ function LetterBoard({ title, subTitle }) {
               )
             }else if(title === "보이는 라디오"){
               return (
+                <>
                 <div>
                 <div className="TopBtnWrap">
                   <img
@@ -46,9 +46,8 @@ function LetterBoard({ title, subTitle }) {
                       />
                       이용안내
                 </div>
-                <ShowList />
                 </div>
-
+                </>
               )
             }
           }()

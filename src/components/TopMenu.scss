@@ -22,8 +22,17 @@
         display: flex;
       }
       .headerLeft {
-        justify-content: left;
+        display: flex;
+        align-items: center;
         div {
+          &:first-child{
+            width: 24px;
+            margin-right: 32px;
+          }
+          &:last-child{
+           height: 18px; 
+
+          }
           cursor: pointer;
         }
       }
