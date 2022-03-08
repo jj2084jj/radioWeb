@@ -12,7 +12,10 @@ function ReplayContentItem({ img, day, title, url, item }) {
             <h3>{title.substring(0, 15)}..</h3>
           </div>
           <div>
-            <img src="https://jj2084jj.github.io/radioWeb/6.svg" alt="" />
+            <img
+              src="https://jj2084jj.github.io/radioWeb/playLogo.svg"
+              alt=""
+            />
             <p className="playCount">{item.count}</p>
           </div>
         </div>

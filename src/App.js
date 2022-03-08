@@ -16,7 +16,7 @@ import Show from "./components/Show";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Header></Header>
       <Main></Main>
       <SubMenu></SubMenu>
@@ -30,7 +30,7 @@ function App() {
         <Route component={NotFound} exact></Route>
       </Switch>
       <Footer></Footer>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 export default App;

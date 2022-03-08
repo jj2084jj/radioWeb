@@ -1,6 +1,6 @@
 import TodayConerList from "./home/TodayConerList";
 import DailyConer from "./letter/DailyConer";
-import LetterBoard from "./letter/LetterBoard";
+import CommonBoard from "./letter/CommonBoard";
 
 
 function Show() {
@@ -15,9 +15,9 @@ function Show() {
           <DailyConer></DailyConer>
         </div>
         <div>
-          <LetterBoard title={"보이는 라디오"}
+          <CommonBoard title={"보이는 라디오"}
           subTitle={"이 프로그램은 무료로 보실 수 있습니다."}
-          ></LetterBoard>
+          ></CommonBoard>
         </div>
       </div></>)
 }

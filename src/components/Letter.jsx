@@ -1,6 +1,6 @@
 import TodayConerList from "./home/TodayConerList";
 import DailyConer from "./letter/DailyConer";
-import LetterBoard from "./letter/LetterBoard";
+import CommonBoard from "./letter/CommonBoard";
 
 function Letter() {
   return (
@@ -14,10 +14,10 @@ function Letter() {
           <DailyConer></DailyConer>
         </div>
         <div>
-          <LetterBoard 
+          <CommonBoard 
           title={"사연과 신청곡"} 
           subTitle={"특정가수 도배는 자제해주시면 감사하겠습니다!-별밤"}
-          ></LetterBoard>
+          ></CommonBoard>
         </div>
       </div>
     </>
