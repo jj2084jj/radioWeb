@@ -1,6 +1,16 @@
+import { useEffect } from "react";
 import "./TopMenu.scss";
-function TopMenu({ hover }) {
-  console.log(hover);
+function TopMenu({hover}) {
+ useEffect(()=>{
+  if(hover === true){
+   document.getElementsByClassName('topMenuBg')[0].classList.add('slide')
+   document.getElementsByClassName('menuIcon')[0].classList.add('slide')
+  }else{
+    document.getElementsByClassName('topMenuBg')[0].classList.remove('slide')
+    document.getElementsByClassName('menuIcon')[0].classList.remove('slide')
+  }
+ },[hover]);
+
   return (
     <div className="topMenuBg">
       <div className="container">
@@ -10,7 +20,7 @@ function TopMenu({ hover }) {
               <img src="../../public/14-1.svg" alt="" />
             </div>
             <div>
-              <img src="../public/mbc-logo-b.png" alt="" />
+              <img src="../../public/mbc-logo-b.png" alt="" />
             </div>
           </div>
           <div className="headerRigth">
@@ -89,14 +99,18 @@ function TopMenu({ hover }) {
             <div className="onVideoContents">
               <ul>
                 <li>
-                  <div className="onVideoImg"></div>
+                  <div className="onVideoImg">
+                    <img src="@/public/mbc-img01.png" alt="" />
+                  </div>
                   <div className="onVideoTit">
                     <h4>2시 뉴스 외전</h4>
                     <p>MBC</p>
                   </div>
                 </li>
                 <li>
-                  <div className="onVideoImg"></div>
+                  <div className="onVideoImg">
+                    <img src="@/public/mbc-img02.png" alt="" />  
+                  </div>
                   <div className="onVideoTit">
                     <h4>라디오 스타</h4>
                     <p>MBC every1</p>
@@ -110,14 +124,18 @@ function TopMenu({ hover }) {
             <div className="liveVideoContents">
               <ul>
                 <li>
-                  <div className="liveVideoImg"></div>
+                  <div className="liveVideoImg">
+                    
+                  <img src="@/public/mbc-img03.png" alt="" />
+                    </div>
                   <div className="liveVideoTit">
                     <h4>사극 정주행</h4>
                     <p>[이산][7회] 저 계집이 그림을 그린다 했소?</p>
                   </div>
                 </li>
                 <li>
-                  <div className="liveVideoImg"></div>
+                  <div className="liveVideoImg">
+                  <img src="@/public/mbc-img04.png" alt="" /></div>
                   <div className="liveVideoTit">
                     <h4>공화국 시리즈</h4>
                     <p>[제2공과국][2회] 보안법 파동과 자유당</p>

@@ -55,3 +55,28 @@ button {
     }
   }
 }
+
+
+.searchRadio{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 30px;
+  input{
+    border-radius: 10px;
+    border: solid 1px #c4c4c4;
+    height: 54px;
+    width: 314px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+  select{
+    width: 124px;
+    height: 54px;
+    border-radius: 10px;
+    border: solid 1px #c4c4c4;
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+  border-bottom: solid 2px #999;
+}

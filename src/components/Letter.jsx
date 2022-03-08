@@ -14,7 +14,10 @@ function Letter() {
           <DailyConer></DailyConer>
         </div>
         <div>
-          <LetterBoard></LetterBoard>
+          <LetterBoard 
+          title={"사연과 신청곡"} 
+          subTitle={"특정가수 도배는 자제해주시면 감사하겠습니다!-별밤"}
+          ></LetterBoard>
         </div>
       </div>
     </>
