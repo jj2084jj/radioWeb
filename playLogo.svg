@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20">
+    <g data-name="다각형 6" style="fill:none">
+        <path d="m10 0 10 17H0z" style="stroke:none" transform="rotate(90 8.5 8.5)"/>
+        <path d="M10 1.972 1.748 16h16.504L10 1.972M10 0l10 17H0L10 0z" style="fill:#c4c4c4;stroke:none" transform="rotate(90 8.5 8.5)"/>
+    </g>
+</svg>
