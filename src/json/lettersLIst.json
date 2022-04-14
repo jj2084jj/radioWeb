@@ -34,5 +34,31 @@
       "clickCount": 32,
       "title": "New York No. 1 Lake Park"
     }
+  ],
+  "replayData": [
+    {
+      "key": "1",
+      "date": "John Brown",
+      "count": 32,
+      "title": "New York No. 1 Lake Park"
+    },
+    {
+      "key": "2",
+      "date": "John Brown",
+      "count": 32,
+      "title": "New York No. 1 Lake Park"
+    },
+    {
+      "key": "3",
+      "date": "John Brown",
+      "count": 32,
+      "title": "New York No. 1 Lake Park"
+    },
+    {
+      "key": "4",
+      "date": "John Brown",
+      "count": 32,
+      "title": "New York No. 1 Lake Park"
+    }
   ]
 }

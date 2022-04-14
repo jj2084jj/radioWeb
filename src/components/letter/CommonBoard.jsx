@@ -4,6 +4,7 @@ import LetterItem from "../Item/LetterItem";
 import ShowItem from "../Item/ShowItem";
 import Mini from "../Item/Mini";
 import PlayListItem from "../Item/PlayListItem";
+import Replay from "../Item/Replay";
 import "./LetterBoard.scss";
 
 function CommonBoard({ title, subTitle }) {
@@ -27,6 +28,8 @@ function CommonBoard({ title, subTitle }) {
             return <Mini subTitle={subTitle}></Mini>;
           } else if (title === "선곡표") {
             return <PlayListItem subTitle={subTitle}></PlayListItem>;
+          } else if (title === "다시듣기") {
+            return <Replay subTitle={subTitle}></Replay>;
           }
         })()}
         {/* <div className="table" style={{ marginTop: "195px" }}>

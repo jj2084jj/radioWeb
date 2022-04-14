@@ -71,3 +71,110 @@
     justify-content: center;
   }
 }
+
+#replay {
+  margin-top: 30px;
+  .replay_top {
+    button {
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 9px 20px 7px;
+      border: solid 1px #b1b1b1;
+      color: #1d1d1d;
+      font-size: 15px;
+      height: 40px;
+      box-sizing: border-box;
+      p {
+        margin-top: 2px;
+        font-size: 15px;
+        color: #1d1d1d;
+      }
+    }
+    > p {
+      font-size: 15px;
+      color: #1d1d1d;
+      margin-top: 10px;
+    }
+  }
+  .play_box {
+    margin-top: 32px;
+    border-radius: 10px;
+    border: solid 1px #c4c4c4;
+    background-color: #fff;
+    padding: 28px 31px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    > div {
+      &:first-child {
+        display: flex;
+        align-items: center;
+        .play_button {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 60px;
+          height: 60px;
+          margin: 0 10px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .text_box {
+    width: 100%;
+    > div {
+      display: flex;
+    }
+    .top {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 18px;
+        color: #1d1d1d;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+      p {
+        margin-right: 69px;
+        line-height: normal;
+        font-size: 15px;
+      }
+      > div {
+        display: flex;
+        justify-content: left;
+        height: 20px;
+        align-items: center;
+        img {
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+        }
+        .ant-slider {
+          width: 100px;
+        }
+      }
+    }
+    .bottom {
+      width: 100%;
+      align-items: center;
+      > div {
+        font-size: 15px;
+        width: 60px;
+        &:nth-child(2) {
+          width: calc(100% - 120px);
+        }
+      }
+    }
+  }
+  .replay_table {
+    margin-top: 22px;
+  }
+}

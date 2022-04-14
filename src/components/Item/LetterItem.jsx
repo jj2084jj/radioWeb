@@ -40,7 +40,6 @@ advices.map((item) => {
   };
   data.push(table);
 });
-console.log(data);
 
 function LetterItem({ subTitle }) {
   return (
