@@ -22,6 +22,7 @@ function App() {
       <SubMenu></SubMenu>
       <Switch>
         <Route path="/" component={Home} exact></Route>
+        <Route path="/radioWeb" component={Home} exact></Route>
         <Route path="/mini" component={Mini}></Route>
         <Route path="/playlist" component={PlayList}></Route>
         <Route path="/letter" component={Letter}></Route>
