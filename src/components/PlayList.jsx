@@ -14,9 +14,9 @@ function PlayList() {
           <DailyConer></DailyConer>
         </div>
         <div>
-          <CommonBoard 
-          title={"선곡표"} 
-          subTitle={"특정가수 도배는 자제해주시면 감사하겠습니다!-별밤"}
+          <CommonBoard
+            title={"선곡표"}
+            subTitle={"특정가수 도배는 자제해주시면 감사하겠습니다!-별밤"}
           ></CommonBoard>
         </div>
       </div>

@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect } from "react";
-import LetterItem from "../Item/LetteItem";
+import LetterItem from "../Item/LetterItem";
 import ShowItem from "../Item/ShowItem";
 import Mini from "../Item/Mini";
+import PlayListItem from "../Item/PlayListItem";
+import Replay from "../Item/Replay";
 import "./LetterBoard.scss";
 
 function CommonBoard({ title, subTitle }) {
@@ -25,12 +27,14 @@ function CommonBoard({ title, subTitle }) {
           } else if (title === "Mini 메시지") {
             return <Mini subTitle={subTitle}></Mini>;
           } else if (title === "선곡표") {
-            return <ShowItem subTitle={subTitle}></ShowItem>;
+            return <PlayListItem subTitle={subTitle}></PlayListItem>;
+          } else if (title === "다시듣기") {
+            return <Replay subTitle={subTitle}></Replay>;
           }
         })()}
-        <div className="table" style={{ marginTop: "195px" }}>
+        {/* <div className="table" style={{ marginTop: "195px" }}>
           테이블 백 개발 먼저 진행중
-        </div>
+        </div> */}
       </div>
     </>
   );

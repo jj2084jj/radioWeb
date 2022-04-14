@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function TodayConerList() {
   return (
@@ -13,7 +14,9 @@ function TodayConerList() {
         </div>
         <div>
           <ul>
-            <li>사연과 신청곡</li>
+            <li>
+              <NavLink to="/letter">사연과 신청곡</NavLink>
+            </li>
             <li>하루 틈</li>
             <li>내일 할 일</li>
           </ul>

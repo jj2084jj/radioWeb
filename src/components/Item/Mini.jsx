@@ -1,4 +1,6 @@
-function Mini({ subTitle }) {
+import { Pagination } from "antd";
+
+function Mini() {
   return (
     <>
       <div>
@@ -165,6 +167,7 @@ function Mini({ subTitle }) {
             </tr>
           </tbody>
         </table>
+        <Pagination className="pagination" defaultCurrent={1} total={50} />
       </div>
     </>
   );

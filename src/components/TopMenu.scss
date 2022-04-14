@@ -9,7 +9,7 @@
   top: -542px;
   transition: all 0.3s ease-in-out;
   opacity: 0;
-  &.slide{
+  &.slide {
     top: 0;
     display: block;
     opacity: 1;
@@ -25,13 +25,12 @@
         display: flex;
         align-items: center;
         div {
-          &:first-child{
+          &:first-child {
             width: 24px;
             margin-right: 32px;
           }
-          &:last-child{
-           height: 18px; 
-
+          &:last-child {
+            height: 18px;
           }
           cursor: pointer;
         }
@@ -80,15 +79,24 @@
         ul {
           display: flex;
 
-          padding: 20px 0;
+          padding: 10px 0;
           box-sizing: unset;
           justify-content: left;
           font-size: 15px;
           border-bottom: solid 1px #ebebeb;
           li {
-            margin-right: 50px;
+            padding: 10px 36px;
+            cursor: pointer;
             a {
               color: unset;
+            }
+            &:hover {
+              background-color: #0075e0;
+              a {
+                color: white;
+              }
+              font-weight: bold;
+              border-radius: 29px;
             }
           }
         }
@@ -113,7 +121,7 @@
             li {
               margin-right: 20px;
               div {
-                img{
+                img {
                   width: 100%;
                   height: 100%;
                 }
