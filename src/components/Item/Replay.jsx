@@ -1,5 +1,5 @@
 import { Table, Slider } from "antd";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import rightIcon from "assets/10-16.svg";
 import leftIcon from "assets/11-12.svg";
 import playIcon from "assets/invalid-name@3x.jpg";
@@ -9,10 +9,6 @@ import popupIcon from "assets/22-2.svg";
 import axios from "axios";
 
 //
-import data from "json/LettersList.json";
-
-console.log(data);
-
 const columns = [
   {
     title: "방송일",
@@ -24,7 +20,7 @@ const columns = [
     title: "제목",
     dataIndex: "title",
     key: "title",
-    width: "70%",
+    width: "40%",
   },
   {
     title: "길이",
@@ -33,26 +29,78 @@ const columns = [
   },
 ];
 
+//경고창
+function err() {
+  alert("서비스를 준비중입니다.");
+}
+
 function Replay() {
-  useEffect(async () => {
-    axios
+  //기본 데이터 상태설정
+  const [data, setData] = useState({
+    tableData: [],
+    totalCount: 0,
+  });
+  const [page, updatePage] = useState({
+    current: 1,
+    total: 0,
+  });
+  const [loading, setLoaing] = useState(false);
+
+  //화면 접근과 동시에 실행
+  useEffect(() => {
+    getData();
+  }, [page.current]);
+
+  //데이터 가져오기
+  async function getData() {
+    setLoaing(true);
+
+    //정보설정
+    const params = {
+      page: page.current,
+      perPage: 10,
+      serviceKey: process.env.REACT_APP_URD_KEY,
+    };
+
+    await axios
       .get(
-        "https:api.odcloud.kr/api/15071046/v1/uddi:abe42915-3cb5-477d-8d53-b7430e5567f0_model",
-        {
-          params: {
-            page: 1,
-            perPage: 10,
-            key: "M7sSvW0xFR2GgsHOFvbfuhZScc2ZEmPHuoCnD10JufV63nF8UXChAq1heu1tlPTtdZ%2FNioFON3Lv3SmGCvGRzw%3D%3D",
-          },
-        }
+        "https://api.odcloud.kr/api/15071046/v1/uddi:abe42915-3cb5-477d-8d53-b7430e5567f0",
+        { params }
       )
       .then((res) => {
-        console.log(res);
-      });
-  }, []);
+        let list = [];
+        res.data.data.map((item, index) => {
+          let table = {
+            date: "2022-04-13",
+            title: item.아티스트명 + "-" + item.앨범명,
+            count: item.제작사명,
+            key: index,
+          };
+          list.push(table);
+        });
 
-  function err() {
-    alert("서비스를 준비중입니다.");
+        //상태변경
+        setData({
+          tableData: [...list],
+          totalCount: res.data.totalCount,
+        });
+        updatePage({
+          current: res.data.page,
+          total: res.data.totalCount,
+        });
+
+        setLoaing(false);
+      });
+  }
+
+  //페이징처리될경우
+  function setPage(pagination) {
+    updatePage((prevState) => {
+      return {
+        ...prevState,
+        current: pagination.current,
+      };
+    });
   }
 
   return (
@@ -114,7 +162,14 @@ function Replay() {
         </div>
 
         <div className="replay_table">
-          <Table columns={columns} showHeader={false} />
+          <Table
+            columns={columns}
+            showHeader={false}
+            dataSource={data.tableData}
+            pagination={page}
+            onChange={setPage}
+            loading={loading}
+          />
         </div>
       </div>
     </>

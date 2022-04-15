@@ -125,7 +125,7 @@ function ShowItem() {
             <button>검색</button>
           </div>
         </div>
-        <div className="listBox">
+        <div className="listBox playListTable">
           <Table columns={columns} dataSource={data} />
         </div>
       </div>

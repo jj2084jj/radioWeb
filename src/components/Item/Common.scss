@@ -70,10 +70,23 @@
   .ant-table-pagination-right {
     justify-content: center;
   }
+  .ant-table-cell-row-hover {
+    background-color: #fcf1dd !important;
+  }
 }
 
+.playListTable {
+  .ant-table-cell-row-hover {
+    background-color: #fff !important;
+    color: #9d6908 !important;
+  }
+}
 #replay {
   margin-top: 30px;
+  .ant-table-cell-row-hover {
+    background-color: #fcf1dd !important;
+  }
+
   .replay_top {
     button {
       img {

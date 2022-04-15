@@ -23,7 +23,7 @@ function ShowItem({ subTitle }) {
     );
     res.data.items.map(async (item) => {
       const count = await getCount(item);
-      item.count = count.toLocaleString("en");
+      item.count = count.toLocaleString();
       return item;
     });
     return res.data.items;
