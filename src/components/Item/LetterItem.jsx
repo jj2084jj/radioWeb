@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Table } from "antd";
 import kadvice from "kadvice";
 
@@ -42,6 +43,27 @@ advices.map((item) => {
 });
 
 function LetterItem({ subTitle }) {
+  const [visible, setVisible] = useState(false);
+
+  const onFinish = (values: any) => {
+    console.log(values);
+  };
+  const validateMessages = {
+    required: "${label} is required!",
+    types: {
+      email: "${label} is not a valid email!",
+      number: "${label} is not a valid number!",
+    },
+    number: {
+      range: "${label} must be between ${min} and ${max}",
+    },
+  };
+
+  const layout = {
+    labelCol: { span: 2 },
+    wrapperCol: { span: 14 },
+  };
+
   return (
     <>
       <div>
@@ -53,7 +75,7 @@ function LetterItem({ subTitle }) {
             />
             게시판 운영 원칙
           </button>
-          <button className="write">
+          <button className="write" onClick={() => setVisible(true)}>
             <img
               src="https://jj2084jj.github.io/radioWeb/img-icon-write.png"
               alt="write"
