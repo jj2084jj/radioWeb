@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <!-- <link rel="icon" href="./star.webp" /> 파비콘 넣는곳 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta http-equiv="Author" content="joeun_kim" />
+    <meta http-equiv="Reply-To" content="whdms3368@gmail.com" />
+    <meta http-equiv="Email" content="whdms3368@gmail.com" />
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -20,5 +22,21 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      let isMobile = /Mobi/i.test(window.navigator.userAgent);
+      let meta = document.createElement("meta");
+      meta.name = "viewport";
+
+      if (isMobile === true) {
+        //모바일
+        console.log("mo");
+        meta.content = "width=1280";
+      } else {
+        console.log("pc");
+        meta.content = "width=1280";
+      }
+
+      document.getElementsByTagName("head")[0].appendChild(meta);
+    </script>
   </body>
 </html>
