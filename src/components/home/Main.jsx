@@ -1,5 +1,5 @@
 import React from "react";
-import "./Main.scss";
+import "scss/common.scss";
 
 function Main() {
   window.addEventListener("load", function () {

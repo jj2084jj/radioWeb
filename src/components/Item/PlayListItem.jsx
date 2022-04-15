@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { DatePicker, Space, Select, Input, Table } from "antd";
 
-import "./Common.scss";
+import "scss/common.scss";
 
 const { Option } = Select;
 

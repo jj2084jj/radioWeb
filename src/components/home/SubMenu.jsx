@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import "./SubMenu.scss";
+import "scss/common.scss";
 
 const activeStyle = { color: "white" };
 

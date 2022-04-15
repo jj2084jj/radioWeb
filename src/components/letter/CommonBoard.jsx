@@ -1,11 +1,10 @@
-import axios from "axios";
 import { useEffect } from "react";
 import LetterItem from "../Item/LetterItem";
 import ShowItem from "../Item/ShowItem";
 import Mini from "../Item/Mini";
 import PlayListItem from "../Item/PlayListItem";
 import Replay from "../Item/Replay";
-import "./LetterBoard.scss";
+import "scss/common.scss";
 
 function CommonBoard({ title, subTitle }) {
   useEffect(() => {

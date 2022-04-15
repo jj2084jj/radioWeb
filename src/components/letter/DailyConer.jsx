@@ -1,4 +1,4 @@
-import "./DailyConer.scss";
+import "scss/common.scss";
 
 function DailyConer() {
   return (

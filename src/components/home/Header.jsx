@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Header.scss";
+import "scss/common.scss";
 import TopMenu from "../TopMenu";
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
         <div className="headerLeft">
           <div
             className="menuIcon"
-            style={{ cursor: "pointer", zIndex:"3" }}
+            style={{ cursor: "pointer", zIndex: "3" }}
             onClick={menuClick}
           >
             <div></div>
