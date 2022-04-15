@@ -42,6 +42,7 @@ function Replay() {
   });
   const [page, updatePage] = useState({
     current: 1,
+    pageSize: 10,
     total: 0,
   });
   const [loading, setLoaing] = useState(false);
@@ -49,7 +50,7 @@ function Replay() {
   //화면 접근과 동시에 실행
   useEffect(() => {
     getData();
-  }, [page.current]);
+  }, [page.current, page.pageSize]);
 
   //데이터 가져오기
   async function getData() {
@@ -58,7 +59,7 @@ function Replay() {
     //정보설정
     const params = {
       page: page.current,
-      perPage: 10,
+      perPage: page.pageSize,
       serviceKey: process.env.REACT_APP_URD_KEY,
     };
 
@@ -87,6 +88,7 @@ function Replay() {
         updatePage({
           current: res.data.page,
           total: res.data.totalCount,
+          pageSize: page.pageSize,
         });
 
         setLoaing(false);
@@ -99,6 +101,7 @@ function Replay() {
       return {
         ...prevState,
         current: pagination.current,
+        pageSize: pagination.pageSize,
       };
     });
   }

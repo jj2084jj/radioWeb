@@ -85,10 +85,7 @@ const data = [
 
 data.map((item) => {
   item.clickCount = Math.floor(Math.random() * 100);
-  console.log(item.clickCount);
 });
-
-console.log(data);
 
 function onChange(date, dateString) {
   console.log(date, dateString);

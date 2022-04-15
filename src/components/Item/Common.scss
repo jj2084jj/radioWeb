@@ -189,5 +189,12 @@
   }
   .replay_table {
     margin-top: 22px;
+    .ant-table-pagination.ant-pagination {
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      margin-top: 36px;
+      margin-bottom: calc(63px - 36px);
+    }
   }
 }
